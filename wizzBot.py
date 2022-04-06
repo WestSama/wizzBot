@@ -35,7 +35,7 @@ async def on_message(message):
 @bot.event
 async def on_member_remove(member:discord.User):
     channel = bot.get_channel(520931518655234048)
-    await channel.send(f"{member.display_name} has left the server!")
+    await channel.send(f"{member} -- {member.display_name} has left the server!")
 
 @bot.command(description="Is this user sus??")
 async def sus(ctx, member: discord.Member):
