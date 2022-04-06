@@ -29,7 +29,7 @@ async def on_message(message):
             "Poke, poke, poke is that all you do?"
     ]
     msgBot = random.choice(msgs)
-    if message.content.startswith("<@!760636930265317450>"):
+    if message.content.startswith("<@760636930265317450>"):
         await message.channel.send(msgBot)
 
 @bot.event
