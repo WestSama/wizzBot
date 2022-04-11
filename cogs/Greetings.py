@@ -9,7 +9,7 @@ class Greetings(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        print(message.content)
+        # print(message.content)
         msgs = ["Don't ping me you blob!",
                 "I will kill you if you ping me!",
                 "I dare you to ping me again!",
