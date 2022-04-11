@@ -13,12 +13,7 @@ intents.message_content = True
 
 activity = discord.Game(name="Lost Ark EU")
 
-<<<<<<< HEAD
 bot = commands.Bot(debug_guilds=[763654705649156098, 514264673831616512], intents=discord.Intents.all(), activity=activity, command_prefix="!")
-=======
-
-bot = commands.Bot(debug_guilds=[763654705649156098, 514264673831616512], intents=discord.Intents.all(), activity=activity)
->>>>>>> d0f1f197f7a24a32b04b1c169b283621654da911
 
 @bot.event
 async def on_ready():
