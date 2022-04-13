@@ -1,4 +1,4 @@
-import discord
+import discord, datetime
 import random
 from discord.ext import commands
 import asyncio
@@ -35,6 +35,28 @@ class Utils(commands.Cog):
             if counter == int(mins):
                 await ctx.author.send(embed=embed2)
                 break
+    
+    # , ctx, reminder:str, hour:int, minute:int, role:discord.Role, day:discord.Option(int, required=False)
+    # @commands.slash_command(description="Schedule a event reminder.")
+    # async def schedule(self, ctx):
+        
+        
+    #     for member in ctx.guild.members:
+    #         if member.roles == "Ociffer":
+    #             print(member)
+    #     now = datetime.datetime.now()
+    #     if not day:
+    #         then = now.replace(hour=hour, minute=minute)
+    #         waitTime = (then-now).total_seconds()
+    #         print(then)
+    #     else:
+    #         then = now.replace(day=day, hour=hour, minute=minute)
+    #         print(then)
+    #         waitTime = (then-now).total_seconds()
+    #     print(waitTime)
+    #     await asyncio.sleep(waitTime)
+        
+
 
 def setup(client):
     client.add_cog(Utils(client))

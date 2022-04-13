@@ -1,6 +1,7 @@
 #wizzbot
-import discord, os
-from discord.ext import commands
+
+import discord, os, datetime, asyncio
+from discord.ext import commands, tasks
 from dotenv import load_dotenv
 import random
 
@@ -10,19 +11,16 @@ load_dotenv()
 intents = discord.Intents.all()
 intents.members = True
 intents.message_content = True
+intents.guilds = True
 
 activity = discord.Game(name="Lost Ark EU")
 
-<<<<<<< HEAD
 bot = commands.Bot(debug_guilds=[763654705649156098, 514264673831616512], intents=discord.Intents.all(), activity=activity, command_prefix="!")
-=======
-
-bot = commands.Bot(debug_guilds=[763654705649156098, 514264673831616512], intents=discord.Intents.all(), activity=activity)
->>>>>>> d0f1f197f7a24a32b04b1c169b283621654da911
 
 @bot.event
 async def on_ready():
     print(f'{bot.user} is ready and Online!')
+      
 
 for file in os.listdir("./cogs"):
     if file.endswith(".py"):
@@ -43,4 +41,11 @@ async def reload(ctx, extension):
     bot.reload_extension(f"cogs.{extension}")
     await ctx.send("Reloaded cog!")
 
+@bot.slash_command()
+async def testmember(ctx, role: discord.Role):
+    members = role.members
+    for member in members:
+        print(f"{member.display_name} -- {member.id}")
+        await member.send("Hello")
+        await asyncio.sleep(1)
 bot.run(os.getenv('WIZZBOT_TOKEN'))

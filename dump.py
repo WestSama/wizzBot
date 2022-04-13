@@ -90,3 +90,30 @@ async def createthread(ctx):
     """To create thread in specific channel it required Guild Level higher"""
     channel = bot.get_channel(763654706144739330) # define this!
     await channel.create_thread(name="Thread Name", message=None, auto_archive_duration=60, type=None, reason=None)
+
+
+
+    datetime.time(0, 55, tzinfo=tz),
+        datetime.time(1, 55, tzinfo=tz),
+        datetime.time(2, 55, tzinfo=tz),
+        datetime.time(3, 55, tzinfo=tz),
+        datetime.time(4, 55, tzinfo=tz),
+        datetime.time(5, 55, tzinfo=tz),
+        datetime.time(6, 55, tzinfo=tz),
+        datetime.time(7, 55, tzinfo=tz),
+        datetime.time(8, 55, tzinfo=tz),
+        datetime.time(9, 55, tzinfo=tz),
+        datetime.time(10, 55, tzinfo=tz),
+        datetime.time(11, 55, tzinfo=tz),
+        datetime.time(12, 9, tzinfo=tz),
+        datetime.time(13, 55, tzinfo=tz),
+        datetime.time(14, 55, tzinfo=tz),
+        datetime.time(15, 55, tzinfo=tz),
+        datetime.time(16, 55, tzinfo=tz),
+        datetime.time(17, 55, tzinfo=tz),
+        datetime.time(18, 55, tzinfo=tz),
+        datetime.time(19, 55, tzinfo=tz),
+        datetime.time(20, 55, tzinfo=tz),
+        datetime.time(21, 55, tzinfo=tz),
+        datetime.time(22, 55, tzinfo=tz),
+        datetime.time(23, 55, tzinfo=tz),
